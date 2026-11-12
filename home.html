@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adopt - NobleTails</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="layout.css">
+</head>
+
+<body>
+
+<header>
+  <a class="logo" href="index.html">🐾 NobleTails</a>
+  <button id="menuBtn" aria-label="menu">☰</button>
+
+  <nav id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="home.html">Adopt</a>
+    <a href="calculator.html">Food Calculator</a>
+    <a href="club.html">Volunteer Club</a>
+    <a href="report.html">Report Stray</a>
+    <a href="register.html">Join Us</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="signin.html">Sign In</a>
+    <button id="themeBtn">☀ Light</button>
+  </nav>
+</header>
+
+<div class="dashboard">
+
+  <section class="center">
+
+    <h2>Meet the Pets</h2>
+
+    <div class="petlist" id="petList">
+
+      <div class="pet" data-type="dog">
+        <img src="images/bruno.jpg" alt="Bruno" onerror="this.onerror=null;this.src='images/dog.svg'">
+        <div class="info">
+          <h4>Bruno</h4>
+          <span class="tag">Dog · 2 years</span>
+          <p>Friendly and loves long walks.</p>
+        </div>
+      </div>
+
+      <div class="pet" data-type="cat">
+        <img src="images/misty.jpg" alt="Misty" onerror="this.onerror=null;this.src='images/cat.svg'">
+        <div class="info">
+          <h4>Misty</h4>
+          <span class="tag">Cat · 2 months</span>
+          <p>Shy at first but very cuddly.</p>
+        </div>
+      </div>
+
+      <div class="pet" data-type="dog">
+        <img src="images/lucky.jpg" alt="Lucky" onerror="this.onerror=null;this.src='images/dog.svg'">
+        <div class="info">
+          <h4>Lucky</h4>
+          <span class="tag">Dog · 6 months</span>
+          <p>Rescued from a road accident, now fully healed.</p>
+        </div>
+      </div>
+
+      <div class="pet" data-type="cat">
+        <img src="images/tom.jpg" alt="Tom" onerror="this.onerror=null;this.src='images/cat.svg'">
+        <div class="info">
+          <h4>Tom</h4>
+          <span class="tag">Cat · 3 years</span>
+          <p>Calm and good with kids.</p>
+        </div>
+      </div>
+
+      <div class="pet" data-type="dog">
+        <img src="images/coco.jpg" alt="Coco" onerror="this.onerror=null;this.src='images/dog.svg'">
+        <div class="info">
+          <h4>Coco</h4>
+          <span class="tag">Dog · 1.5 months</span>
+          <p>Playful and loves fetch.</p>
+        </div>
+      </div>
+
+      <div class="pet" data-type="cat">
+        <img src="images/luna.jpg" alt="Luna" onerror="this.onerror=null;this.src='images/cat.svg'">
+        <div class="info">
+          <h4>Luna</h4>
+          <span class="tag">Cat · 2 years</span>
+          <p>Gentle lap cat who loves sunny spots.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+<aside class="right volunteer-video">
+
+    <h3>Volunteer Moments</h3>
+
+    <p class="small">
+        A little love and kindness goes a long way. Watch our volunteer interact with community pets. 
+    </p>
+
+    <video controls playsinline>
+        <source src="videos/volunteer.mp4" type="video/mp4">
+        Your browser does not support video playback.
+    </video>
+
+</aside>
+
+
+</div>
+
+<footer>
+  <p>🐾 NobleTails - Rescue · Rehabilitate · Rehome</p>
+  <p class="small">A web technology project (25CS208), Karunya Institute of Technology and Sciences</p>
+</footer>
+
+<script src="theme.js"></script>
+<script src="chatbot.js"></script>
+
+</body>
+</html>

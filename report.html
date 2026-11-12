@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Report a Stray - NobleTails</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="layout.css">
+</head>
+<body>
+<header>
+  <a class="logo" href="index.html">🐾 NobleTails</a>
+  <button id="menuBtn" aria-label="menu">☰</button>
+  <nav id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="home.html">Adopt</a>
+    <a href="calculator.html">Food Calculator</a>
+    <a href="club.html">Volunteer Club</a>
+    <a href="report.html">Report Stray</a>
+    <a href="register.html">Join Us</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="signin.html">Sign In</a>
+    <button id="themeBtn">☀ Light</button>
+  </nav>
+</header>
+<main class="formpage">
+  <h2>🚨 Report a Stray Animal</h2>
+  <p class="small">Saw an injured, sick or abandoned cat or dog? Tell us where, and our rescue team will be notified.</p>
+  <form id="reportForm" novalidate>
+    <label>Your Name</label>
+    <input type="text" id="rName" placeholder="Your full name">
+    <label>Your Mobile Number</label>
+    <input type="text" id="rPhone" placeholder="So our team can call you">
+    <label>Animal</label>
+    <select id="rAnimal">
+      <option value="">-- Select --</option>
+      <option>Dog</option>
+      <option>Cat</option>
+      <option>Puppy</option>
+      <option>Kitten</option>
+      <option>Other</option>
+    </select>
+    <label>Condition</label>
+    <select id="rCondition">
+      <option value="">-- Select --</option>
+      <option>Injured</option>
+      <option>Sick</option>
+      <option>Abandoned / lost</option>
+      <option>Hungry / needs food</option>
+    </select>
+    <label>Address / Landmark where you saw it</label>
+    <textarea id="rAddress" rows="3" placeholder="Street, area, nearby landmark"></textarea>
+    <button type="button" id="locBtn" class="btn btn2 small-btn">📍 Use my current location</button>
+    <p id="locMsg" class="small"></p>
+    <label>Anything else we should know? (optional)</label>
+    <textarea id="rNotes" rows="2" placeholder="Colour, size, behaviour..."></textarea>
+    <button type="submit" id="rBtn" class="btn">Send Report</button>
+    <p id="rMsg" class="ok"></p>
+  </form>
+</main>
+<footer>
+  <p>🐾 NobleTails - Rescue · Rehabilitate · Rehome</p>
+  <p class="small">A web technology project (25CS208), Karunya Institute of Technology and Sciences</p>
+</footer>
+<script src="report.js"></script>
+<script src="theme.js"></script>
+</body>
+</html>

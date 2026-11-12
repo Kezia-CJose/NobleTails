@@ -1,0 +1,148 @@
+
+/* =====================================
+   NOBLETAILS - ADOPT PAGE LAYOUT
+   Two-column desktop layout
+   ===================================== */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 24px;
+    padding: 20px;
+    max-width: 1450px;
+    width: 94%;
+    margin: 25px auto;
+    align-items: start;
+    box-sizing: border-box;
+}
+
+/* Main pet section */
+.center {
+    min-width: 0;
+    width: 100%;
+}
+
+.center h2 {
+    margin-top: 0;
+}
+
+/* Pet cards */
+.petlist {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    width: 100%;
+}
+
+.pet {
+    min-width: 0;
+    width: 100%;
+}
+
+/* Add a pet form */
+.right {
+    padding: 16px;
+    align-self: start;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* TABLET */
+@media (max-width: 1000px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .petlist {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+    .dashboard {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .petlist {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero .brand {
+        font-size: 48px;
+    }
+
+    .tagline {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    .tagline span + span::before {
+        margin: 0 6px;
+    }
+
+    #menuBtn {
+        display: block;
+    }
+
+    #navLinks {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: var(--bg2);
+        border: 1px solid var(--main);
+        padding: 10px 16px;
+        width: 190px;
+        z-index: 5;
+    }
+
+    #navLinks.show {
+        display: block;
+    }
+
+    #navLinks a,
+    #navLinks button {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* SMALL PHONES */
+@media (max-width: 480px) {
+    .petlist {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* VOLUNTEER VIDEO SECTION */
+
+.volunteer-video {
+    padding: 16px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 5px 14px rgba(0,0,0,0.10);
+}
+
+.volunteer-video h3 {
+    color: var(--main);
+}
+
+.volunteer-video p {
+    line-height: 1.6;
+}
+
+.volunteer-video video {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    margin-top: 15px;
+    background: #000;
+}

@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Calculator - NobleTails</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="layout.css">
+
+<style>
+.twocol {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.twocol > .card {
+    flex: 1;
+    min-width: 0;
+}
+
+.feeding-info h4 {
+    color: var(--main);
+    margin-bottom: 3px;
+}
+
+.feeding-info .small {
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+    margin-top: 18px;
+}
+
+@media (max-width: 650px) {
+    .twocol {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a class="logo" href="index.html">🐾 NobleTails</a>
+  <button id="menuBtn" aria-label="menu">☰</button>
+
+  <nav id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="home.html">Adopt</a>
+    <a href="calculator.html">Food Calculator</a>
+    <a href="club.html">Volunteer Club</a>
+    <a href="report.html">Report Stray</a>
+    <a href="register.html">Join Us</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="signin.html">Sign In</a>
+    <button id="themeBtn">☀ Light</button>
+  </nav>
+</header>
+
+<main>
+
+  <h2>Pet Food Calculator</h2>
+  <p class="lead">Calculate how much food your shelter needs and estimate the total cost.</p>
+
+  <div class="twocol">
+
+    <!-- FOOD ESTIMATOR -->
+    <div class="card">
+      <h3>Food Estimator</h3>
+
+      <label>Number of pets</label>
+      <input type="number" id="numPets" value="10" min="1">
+
+      <label>Food per pet per day (grams)</label>
+      <input type="number" id="gramsPer" value="300" min="1">
+
+      <label>Number of days</label>
+      <input type="number" id="numDays" value="30" min="1">
+
+      <label>Price per kg (₹)</label>
+      <input type="number" id="pricePer" value="120" min="0">
+
+      <button class="btn" id="estBtn">Calculate</button>
+
+      <p id="estResult" class="ok"></p>
+    </div>
+
+    <!-- FEEDING INFORMATION -->
+    <div class="card feeding-info">
+      <h3>For Your Information</h3>
+      <p>Approximate daily dry-food requirements:</p>
+
+      <h4>Adult Cats</h4>
+      <p>40–65 grams per day for an average 3–5 kg cat.</p>
+
+      <h4>Kittens</h4>
+      <p>30–55 grams (2–4 months) and 55–75 grams (4–6 months). Older kittens need age-appropriate portions.</p>
+
+      <h4>Adult Dogs</h4>
+      <p>Approx. 110 g for a 5 kg dog, 175 g for a 10 kg dog and 325 g for a 25 kg dog.</p>
+
+      <h4>Puppies</h4>
+      <p>Food requirements depend on age, breed and expected adult weight. Growing puppies need specially formulated puppy food.</p>
+
+      <p class="small">
+        Note: These are reference estimates, not fixed portions.
+        Always check the food packaging and consult a veterinarian
+        for individual feeding requirements.
+      </p>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  <p>🐾 NobleTails - Rescue · Rehabilitate · Rehome</p>
+  <p class="small">A student web technology project (25CS208), Karunya Institute of Technology and Sciences</p>
+</footer>
+
+<script src="calculator.js"></script>
+<script src="theme.js"></script>
+
+</body>
+</html>
